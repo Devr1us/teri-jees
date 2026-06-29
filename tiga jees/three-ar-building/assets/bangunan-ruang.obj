@@ -1,0 +1,57 @@
+# Bangunan Ruang (low-poly) - OBJ
+# Satuan kira-kira meter, origin di tengah alas
+o BangunanRuang
+mtllib bangunan-ruang.mtl
+
+# Vertices
+# Base (balok) ukuran 0.6 x 0.3 x 0.5, tinggi 0.22
+v -0.30 0.00 -0.25
+v  0.30 0.00 -0.25
+v  0.30 0.00  0.25
+v -0.30 0.00  0.25
+v -0.30 0.22 -0.25
+v  0.30 0.22 -0.25
+v  0.30 0.22  0.25
+v -0.30 0.22  0.25
+
+# Tower (balok) ukuran 0.25 x 0.25, tinggi 0.45, offset sedikit
+v -0.22 0.22 -0.12
+v  0.03 0.22 -0.12
+v  0.03 0.22  0.13
+v -0.22 0.22  0.13
+v -0.22 0.67 -0.12
+v  0.03 0.67 -0.12
+v  0.03 0.67  0.13
+v -0.22 0.67  0.13
+
+# Roof (limas) untuk tower
+v -0.095 0.82 0.005
+
+vt 0 0
+vt 1 0
+vt 1 1
+vt 0 1
+
+usemtl BangunanMat
+
+# Faces - base
+f 1 2 6 5
+f 2 3 7 6
+f 3 4 8 7
+f 4 1 5 8
+f 5 6 7 8
+f 1 4 3 2
+
+# Faces - tower
+f 9 10 14 13
+f 10 11 15 14
+f 11 12 16 15
+f 12 9 13 16
+f 13 14 15 16
+f 9 12 11 10
+
+# Faces - roof (pyramid)
+f 13 14 17
+f 14 15 17
+f 15 16 17
+f 16 13 17
